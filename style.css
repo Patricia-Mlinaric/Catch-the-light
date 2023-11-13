@@ -1,0 +1,160 @@
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Courier New', Courier, monospace;
+  font-size: 16px;
+}
+
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: lightsteelblue;
+  margin: 3rem;
+}
+
+.led {
+  padding: 2rem 2rem;
+}
+
+.led-1,
+.led-6 {
+  filter: hue-rotate(310deg);
+}
+
+.players {
+  display: flex;
+  justify-content: space-evenly;
+  font-weight: 900;
+  font-size: 1.2rem;
+  text-align: center;
+}
+
+.player1,
+.player2 {
+  background-color: lightgreen;
+  padding: 2rem;
+}
+
+button {
+  padding: 0.9rem;
+  background-color: lightskyblue;
+  font-family: 'Courier New', Courier, monospace;
+  margin: 1rem;
+  border: 2px solid yellow;
+}
+
+button:hover,
+button:focus {
+  color: rgba(255, 255, 255, 1);
+  box-shadow: 0 5px 15px rgba(3, 92, 3, 0.4);
+}
+
+.description {
+  font-size: 0.9rem;
+  font-weight: 400;
+  margin-top: 1rem;
+}
+
+/* flash lights */
+
+.active {
+  filter: drop-shadow(4px 4px 4px rgba(23, 4, 237, 0.969));
+}
+
+.led-1.active,
+.led-6.active {
+  filter: drop-shadow(4px 4px 4px rgba(23, 4, 237, 0.969)) hue-rotate(310deg);
+}
+
+@media (max-width: 760px) {
+  .led {
+    padding: 2rem 1rem;
+  }
+
+  .player1,
+  .player2 {
+    padding: 0.8rem;
+  }
+}
+@media (max-width: 560px) {
+  .led {
+    padding: 2rem 0.5rem;
+  }
+
+  .player1,
+  .player2 {
+    padding: 0.4rem;
+  }
+}
+@media (max-width: 470px) {
+  .led {
+    padding: 2rem 0.3rem;
+  }
+
+  .player1,
+  .player2 {
+    padding: 0.2rem;
+  }
+}
+@media (max-width: 447px) {
+  .led {
+    padding: 2rem 0.1rem;
+  }
+
+  .player1,
+  .player2 {
+    padding: 0;
+  }
+}
+@media (max-width: 435px) {
+  .led {
+    padding: 2rem 0.1rem;
+  }
+
+  .players {
+    flex-direction: column;
+    gap: 1rem;
+    margin: 5rem;
+  }
+  .player1,
+  .player2 {
+    padding: 0.2rem;
+  }
+}
+@media (max-width: 400px) {
+  .led {
+    padding: 2rem 0;
+  }
+}
+@media (max-width: 380px) {
+  .led {
+    padding: 2rem 0;
+  }
+  img {
+    width: 40px;
+  }
+}
+@media (max-width: 335px) {
+  img {
+    width: 30px;
+  }
+}
+
+.new-game {
+  margin: 1rem 3rem;
+  border: 3px dotted yellow;
+}
+
+.new-game:hover,
+.new-game:focus {
+  color: yellow;
+  font-weight: 600;
+  box-shadow: 0 5px 15px rgba(3, 92, 3, 0.4);
+}
