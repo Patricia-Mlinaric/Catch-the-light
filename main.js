@@ -103,7 +103,7 @@ const player1Container = document.querySelector('.player1');
 const player2Container = document.querySelector('.player2');
 
 function gameOver() {
-  if (player1Score === 2) {
+  if (player1Score === 5) {
     player1Container.innerHTML = '';
     player1Container.innerHTML = `
           <div>
@@ -117,7 +117,7 @@ function gameOver() {
           <p> 🎈 You lost!🎈 </p>
           </div>`;
     clearInterval(myInterval);
-  } else if (player2Score === 2) {
+  } else if (player2Score === 5) {
     player2Container.innerHTML = '';
     player2Container.innerHTML = `
           <div>
